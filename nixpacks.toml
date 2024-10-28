@@ -11,4 +11,5 @@ cmds = [
 cmds = ['npm run build']
 
 [start]
-cmd = 'npm start'
+# Forgot to run the server
+cmd = "npm start & node ./server/app.js"
