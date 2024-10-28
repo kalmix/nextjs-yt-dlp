@@ -11,5 +11,5 @@ cmds = [
 cmds = ['npm run build']
 
 [start]
-# Forgot to run the server
-cmd = "npm start & node ./server/app.js"
+# WHY IS THE SERVER RUNNING ON PORT 3000
+cmd = 'PORT=3000 npm start & PORT=4000 node ./server/app.js'
