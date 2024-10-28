@@ -29,7 +29,7 @@ export function Console({ darkMode = true }: ConsoleProps) {
   useEffect(() => {
     let reconnectTimeout: NodeJS.Timeout;
     const connectWebSocket = () => {
-      wsRef.current = new WebSocket("ws://localhost:8080");
+      wsRef.current = new WebSocket("ws://k4sosgskow4scg800w040cc4.150.136.160.212.sslip.io/ws");
 
       wsRef.current.onopen = () => {
         setConnectionState('connected');
