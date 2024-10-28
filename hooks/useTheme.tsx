@@ -1,18 +1,9 @@
-'use client';
-
 import { useState, useEffect } from 'react';
 
 export const useTheme = () => {
-  // Initialize state without localStorage
-  const [darkMode, setDarkMode] = useState(false);
+  const storedTheme = localStorage.getItem("theme");
+  const [darkMode, setDarkMode] = useState(storedTheme === "dark");
 
-  // On mount, check localStorage and update state
-  useEffect(() => {
-    const storedTheme = localStorage.getItem("theme");
-    setDarkMode(storedTheme === "dark");
-  }, []);
-
-  // Handle theme changes
   useEffect(() => {
     document.body.classList.toggle("dark-mode", darkMode);
     localStorage.setItem("theme", darkMode ? "dark" : "light");
